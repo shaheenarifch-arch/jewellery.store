@@ -5,30 +5,452 @@ const IMAGES = [
   'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=80',
   'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=80'
 ];
-const base = document.querySelector('base')?.href || location.origin + '/';
-const routes = {
-  '/collections/rings': ['Rings','Sculptural silhouettes, considered for every day and the occasions that become memories.'],
-  '/collections/necklaces': ['Necklaces','Quietly luminous forms that sit close to the heart.'],
-  '/collections/earrings': ['Earrings','Light-catching studies in balance, movement and proportion.'],
-  '/collections/bracelets': ['Bracelets','A refined line of gold and stone for the wrist.'],
-  '/collections/diamond': ['Diamond Jewellery','Exceptional brilliance, selected for its character and light.'],
-  '/collections/gold': ['Gold Jewellery','Warm, tactile gold shaped into enduring signatures.'],
-  '/collections/pearls': ['Pearl Jewellery','Soft luminosity with a modern Maison Aurelia point of view.'],
-  '/collections/bridal': ['Bridal & Engagement','Pieces to mark a beginning, chosen with intention.']
+
+const collectionRoutes = {
+  '/collections/rings': ['Rings', 'Sculptural silhouettes, considered for every day and the occasions that become memories.'],
+  '/collections/necklaces': ['Necklaces', 'Quietly luminous forms that sit close to the heart.'],
+  '/collections/earrings': ['Earrings', 'Light-catching studies in balance, movement and proportion.'],
+  '/collections/bracelets': ['Bracelets', 'A refined line of gold and stone for the wrist.'],
+  '/collections/diamond': ['Diamond Jewellery', 'Exceptional brilliance, selected for its character and light.'],
+  '/collections/gold': ['Gold Jewellery', 'Warm, tactile gold shaped into enduring signatures.'],
+  '/collections/pearls': ['Pearl Jewellery', 'Soft luminosity with a modern Maison Aurelia point of view.'],
+  '/collections/bridal': ['Bridal & Engagement', 'Pieces to mark a beginning, chosen with intention.']
 };
-const nav = `<header class="topbar"><a class="brand" href="/"><span class="brand-mark"></span><span>Maison Aurelia</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><nav id="site-nav" class="nav" aria-label="Main navigation"><div class="nav-drop"><a href="/collections">Collections</a><div class="mega"><div><b>SHOP</b><a href="/collections">All Jewellery</a><a href="/collections/rings">Rings</a><a href="/collections/necklaces">Necklaces</a><a href="/collections/earrings">Earrings</a><a href="/collections/bracelets">Bracelets</a></div><div><b>EDIT</b><a href="/collections/diamond">Diamond</a><a href="/collections/gold">Gold</a><a href="/collections/pearls">Pearls</a><a href="/collections/bridal">Bridal</a></div></div></div><a href="/craft">Craft</a><a href="/heritage">Heritage</a><a href="/journal">Journal</a></nav></header>`;
-const footer = `<footer><div class="footer-grid"><div><a class="brand" href="/"><span class="brand-mark"></span><span>Maison Aurelia</span></a><p class="muted">Fine jewellery for the moments that shine brightest.</p></div><div><b>SHOP</b><a href="/collections">Collections</a><a href="/collections/rings">Rings</a><a href="/collections/necklaces">Necklaces</a><a href="/collections/earrings">Earrings</a><a href="/collections/bracelets">Bracelets</a></div><div><b>THE MAISON</b><a href="/craft">Craft</a><a href="/heritage">Heritage</a><a href="/about">About</a></div><div><b>DISCOVER</b><a href="/journal">Journal</a><a href="/faq">FAQ</a><a href="/contact">Contact</a></div><div><b>LEGAL</b><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/returns">Returns</a><a href="/shipping">Shipping</a></div></div><div class="newsletter"><div><b>Receive the Maison Journal</b><p class="muted">Notes on jewellery, craft and modern ritual.</p></div><form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you';"><input type="email" required aria-label="Email address" placeholder="Your email address"><button class="btn btn-primary">Subscribe</button></form></div><div class="footer-bottom"><span>© Maison Aurelia</span><span>Instagram &nbsp; Pinterest</span></div></footer>`;
-function shell(content, title, description) { document.title = `${title} | Maison Aurelia`; document.querySelector('meta[name="description"]').content = description; document.querySelector('link[rel="canonical"]').href = location.href.split('?')[0]; return `${nav}<main>${content}</main>${footer}`; }
-function cards(items) { return `<div class="card-grid">${items.map((x,i)=>`<a class="card" href="${x[1]||'/collections'}"><img src="${IMAGES[i%IMAGES.length]}" width="900" height="1100" loading="lazy" alt="${x[0]} fine jewellery"><div><span class="eyebrow">Maison collection</span><h3>${x[0]}</h3><span class="text-link">Explore the edit →</span></div></a>`).join('')}</div>`; }
-function generic(title, intro, sections=[]) { return shell(`<section class="page-intro"><span class="eyebrow">Maison Aurelia</span><h1>${title}</h1><p>${intro}</p></section>${sections.map((s,i)=>`<section class="editorial ${i%2?'reverse':''}"><div><span class="eyebrow">${s[0]}</span><h2>${s[1]}</h2><p>${s[2]}</p></div><img src="${IMAGES[i%IMAGES.length]}" width="900" height="1100" loading="lazy" alt="${s[0]} — Maison Aurelia"></section>`).join('')}` ,title,intro); }
-function home() { return shell(`<section class="hero"><div class="copy"><span class="eyebrow">Fine jewellery</span><h1>Heirlooms for the moments that shine brightest.</h1><p class="lead">Discover rare diamonds, sculpted gold, and extraordinary craftsmanship designed for the extraordinary life you lead.</p><div class="actions"><a class="btn btn-primary" href="/collections">Shop the collection</a><a class="btn btn-secondary" href="/craft">Our craftsmanship</a></div><div class="stats"><div><strong>35+</strong><span>Years craft</span></div><div><strong>4.9/5</strong><span>Client rating</span></div><div><strong>1,200</strong><span>Luxury pieces</span></div></div></div><div class="visual"><div class="image-card" role="img" aria-label="Luxury diamond jewellery"></div><div class="badge"><small>Signature</small><strong>18K</strong></div><div class="floating-note"><strong>Crafted in Paris</strong><span>Exceptional brilliance in every detail.</span></div></div></section><section class="home-section"><span class="eyebrow">The Maison edit</span><h2>A considered collection of light.</h2>${cards([['Rings','/collections/rings'],['Necklaces','/collections/necklaces'],['Bridal & Engagement','/collections/bridal']])}</section>`,`Fine Jewellery`,`Heirlooms for the moments that shine brightest. Discover Maison Aurelia fine jewellery.`); }
-function collections() { return shell(`<section class="page-intro"><span class="eyebrow">The Maison edit</span><h1>Collections</h1><p>Explore a world of sculpted gold, luminous stones and quiet, enduring forms.</p></section>${cards([['All Jewellery','/collections'],['Rings','/collections/rings'],['Necklaces','/collections/necklaces'],['Earrings','/collections/earrings'],['Bracelets','/collections/bracelets'],['Diamond Jewellery','/collections/diamond'],['Gold Jewellery','/collections/gold'],['Pearl Jewellery','/collections/pearls'],['Bridal & Engagement','/collections/bridal']])}<section class="callout"><h2>Find the piece that feels like you.</h2><p>Begin with a material, a moment or a silhouette. The Maison edit is designed to be explored slowly.</p><a class="btn btn-primary" href="/contact">Speak with the Maison</a></section>`,`Collections`,`Explore Maison Aurelia jewellery collections, from rings and necklaces to diamond, gold and bridal jewellery.`); }
-function collection(path) { const [title,intro]=routes[path]; return shell(`<section class="page-intro"><span class="eyebrow">Collections / ${title}</span><h1>${title}</h1><p>${intro}</p></section><section class="product-grid">${['Signature form','Everyday light','The considered detail','A piece to keep'].map((x,i)=>`<article class="product"><img src="${IMAGES[i%IMAGES.length]}" width="900" height="1100" loading="lazy" alt="${title} — ${x}"><span class="eyebrow">${title}</span><h3>${x}</h3><a class="text-link" href="/contact">Enquire with the Maison →</a></article>`).join('')}</section><section class="related"><h2>Continue exploring</h2>${cards([['All Jewellery','/collections'],['Craft','/craft'],['Bridal & Engagement','/collections/bridal']])}</section>`,title,intro); }
-function journal() { const articles=[['The language of light','A study in the way diamonds hold and release light.','/journal/language-of-light'],['Made slowly, made to last','Inside the details that give a piece its presence.','/journal/made-slowly'],['A modern way to say forever','Choosing jewellery for a beginning, not just a day.','/journal/modern-forever']]; return shell(`<section class="page-intro"><span class="eyebrow">The Maison Journal</span><h1>Journal</h1><p>Stories of jewellery, craft, style and the rituals that make a piece yours.</p></section><div class="article-grid">${articles.map((a,i)=>`<a class="article" href="${a[2]}"><img src="${IMAGES[i]}" width="900" height="650" loading="lazy" alt="${a[0]}"><span class="eyebrow">${['Jewellery','Craft','Weddings'][i]} · 19 Sep 2026</span><h2>${a[0]}</h2><p>${a[1]}</p><span class="text-link">Read story →</span></a>`).join('')}</div>`,`Journal`,`The Maison Aurelia Journal: jewellery, craft, style, weddings, diamonds, gold, pearls and Maison stories.`); }
-function article(slug) { const data={ '/journal/language-of-light':['The language of light','Jewellery','A study in the way diamonds hold and release light.'], '/journal/made-slowly':['Made slowly, made to last','Craft','Inside the details that give a piece its presence.'], '/journal/modern-forever':['A modern way to say forever','Weddings','Choosing jewellery for a beginning, not just a day.'] }[slug]||['The Maison Journal','Maison Stories','A closer look at the ideas, materials and rituals behind Maison Aurelia.']; return shell(`<article class="story"><span class="eyebrow">${data[1]} · 19 Sep 2026</span><h1>${data[0]}</h1><p class="lead">${data[2]}</p><img src="${IMAGE}" width="1200" height="800" alt="${data[0]} — Maison Aurelia"><div class="story-copy"><p>At Maison Aurelia, every piece begins with attention: to proportion, to texture, to the way a material catches the light. We believe the most enduring jewellery leaves room for the person who wears it.</p><p>Our approach is deliberate and intimate, bringing together considered design and the quiet pleasure of exceptional detail.</p><a class="btn btn-primary" href="/collections">Explore the collections</a></div></article>`,data[0],data[2]); }
-function simple(path) { const data={ '/about':['About','A point of view shaped by fine materials, thoughtful design and the personal meaning jewellery carries.'], '/faq':['Frequently asked questions','Find considered answers about the Maison, our collections and finding your piece.'], '/shipping':['Shipping','For guidance about delivery and your order, please contact the Maison directly.'], '/returns':['Returns','For return enquiries, please contact us so we can help with the next step.'], '/privacy':['Privacy','We respect your privacy and use information only to support your experience with Maison Aurelia.'], '/terms':['Terms','Please contact the Maison if you need clarification about these website terms.'] }[path]; return generic(data[0],data[1],[['The Maison','A considered way to begin','For personal assistance, our team is here to help you discover the right route.']]); }
-function contact(){return shell(`<section class="page-intro"><span class="eyebrow">The Maison</span><h1>Contact</h1><p>For private appointments, collection enquiries or help choosing a piece, we would love to hear from you.</p></section><section class="contact-box"><div><span class="eyebrow">Speak with us</span><h2>Let’s begin a conversation.</h2><p class="muted">Email or call the Maison and our team will respond with considered guidance.</p></div><div class="contact-details"><a href="mailto:agents@getservices.ai">agents@getservices.ai</a><a href="tel:3137291534">313-729-1534</a></div></section>`,`Contact`,`Contact Maison Aurelia for collection enquiries and personal assistance.`)}
-function craft(){return generic('Craft','The beauty of a Maison Aurelia piece lives in the details: the balance of a line, the feel of a surface and the light held in a stone.',[['The Art of Making','Designed by hand','A patient, precise approach lets each form retain its character.'],['Materials & Stones','Selected for their presence','Gold, diamonds, pearls and other materials are considered for how they live together.'],['Quality & Detail','The Maison standard','From setting to polishing, the final impression is shaped by restraint and care.']]);}
-function heritage(){return generic('Heritage','A modern heritage is not a date on a timeline. It is a point of view carried forward through design, material and memory.',[['Our Story','A living point of view','Maison Aurelia is a space for jewellery that feels personal, enduring and present.'],['Generations of Craft','Knowledge in the details','The language of making is renewed each time a piece is imagined and worn.'],['Modern Heritage','Made for what comes next','Classic materials meet a clear, contemporary sensibility.']]);}
-function render(){let p=location.pathname.replace(/\/$/,'')||'/';let html=p==='/'?home():p==='/collections'?collections():routes[p]?collection(p):p==='/craft'?craft():p==='/heritage'?heritage():p==='/journal'?journal():p.startsWith('/journal/')?article(p):p==='/contact'?contact():simple(p);document.querySelector('#app').innerHTML=html; document.querySelectorAll('a[href^="/"]').forEach(a=>a.addEventListener('click',e=>{if(a.origin===location.origin){e.preventDefault();history.pushState({},'',a.href);render();scrollTo(0,0)}})); const toggle=document.querySelector('.menu-toggle'); if(toggle) toggle.onclick=()=>{const n=document.querySelector('.nav');const open=n.classList.toggle('open');toggle.setAttribute('aria-expanded',open)};}
-addEventListener('popstate',render); render();
+
+const articleData = {
+  '/journal/language-of-light': ['The language of light', 'Jewellery', 'A study in the way diamonds hold and release light.'],
+  '/journal/made-slowly': ['Made slowly, made to last', 'Craft', 'Inside the details that give a piece its presence.'],
+  '/journal/modern-forever': ['A modern way to say forever', 'Weddings', 'Choosing jewellery for a beginning, not just a day.']
+};
+
+const nav = `
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Maison Aurelia home">
+      <span class="brand-mark"></span>
+      <span>Maison Aurelia</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main navigation">
+      <div class="nav-drop">
+        <a href="/collections">Collections</a>
+        <div class="mega" aria-label="Collections navigation">
+          <div>
+            <b>SHOP</b>
+            <a href="/collections">All Jewellery</a>
+            <a href="/collections/rings">Rings</a>
+            <a href="/collections/necklaces">Necklaces</a>
+            <a href="/collections/earrings">Earrings</a>
+            <a href="/collections/bracelets">Bracelets</a>
+          </div>
+          <div>
+            <b>EDIT</b>
+            <a href="/collections/diamond">Diamond</a>
+            <a href="/collections/gold">Gold</a>
+            <a href="/collections/pearls">Pearls</a>
+            <a href="/collections/bridal">Bridal</a>
+          </div>
+        </div>
+      </div>
+      <a href="/craft">Craft</a>
+      <a href="/heritage">Heritage</a>
+      <a href="/journal">Journal</a>
+    </nav>
+  </header>
+`;
+
+const footer = `
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/" aria-label="Maison Aurelia home">
+          <span class="brand-mark"></span>
+          <span>Maison Aurelia</span>
+        </a>
+        <p class="muted">Fine jewellery for the moments that shine brightest.</p>
+      </div>
+      <div>
+        <b>SHOP</b>
+        <a href="/collections">Collections</a>
+        <a href="/collections/rings">Rings</a>
+        <a href="/collections/necklaces">Necklaces</a>
+        <a href="/collections/earrings">Earrings</a>
+        <a href="/collections/bracelets">Bracelets</a>
+      </div>
+      <div>
+        <b>THE MAISON</b>
+        <a href="/craft">Craft</a>
+        <a href="/heritage">Heritage</a>
+        <a href="/about">About</a>
+      </div>
+      <div>
+        <b>DISCOVER</b>
+        <a href="/journal">Journal</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div>
+        <b>LEGAL</b>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/returns">Returns</a>
+        <a href="/shipping">Shipping</a>
+      </div>
+    </div>
+    <div class="newsletter">
+      <div>
+        <b>Receive the Maison Journal</b>
+        <p class="muted">Notes on jewellery, craft and modern ritual.</p>
+      </div>
+      <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you';">
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input id="newsletter-email" type="email" required placeholder="Your email address" />
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <span>© Maison Aurelia</span>
+      <span>Instagram &nbsp; Pinterest</span>
+    </div>
+  </footer>
+`;
+
+function metadata(title, description) {
+  document.title = `${title} | Maison Aurelia`;
+  const descriptionTag = document.querySelector('meta[name="description"]');
+  if (descriptionTag) descriptionTag.content = description;
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = `${location.origin}${location.pathname}`;
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+  const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+  if (ogTitle) ogTitle.content = `${title} | Maison Aurelia`;
+  if (ogDescription) ogDescription.content = description;
+  if (ogUrl) ogUrl.content = `${location.origin}${location.pathname}`;
+  if (twitterTitle) twitterTitle.content = `${title} | Maison Aurelia`;
+  if (twitterDescription) twitterDescription.content = description;
+}
+
+function structuredData(title, description, type = 'WebPage') {
+  const existing = document.getElementById('structured-data');
+  if (existing) existing.remove();
+
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    name: title,
+    description,
+    url: `${location.origin}${location.pathname}`,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Maison Aurelia',
+      url: location.origin
+    }
+  };
+
+  const script = document.createElement('script');
+  script.id = 'structured-data';
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(data);
+  document.head.appendChild(script);
+}
+
+function shell(content, title, description, type = 'WebPage') {
+  metadata(title, description);
+  structuredData(title, description, type);
+  return `${nav}<main id="main-content">${content}</main>${footer}`;
+}
+
+function cards(items) {
+  return `<div class="card-grid">${items.map((item, index) => `
+    <a class="card" href="${item[1] || '/collections'}">
+      <img src="${IMAGES[index % IMAGES.length]}" width="900" height="1100" loading="lazy" alt="${item[0]} fine jewellery" />
+      <div>
+        <span class="eyebrow">Maison collection</span>
+        <h3>${item[0]}</h3>
+        <span class="text-link">Explore the edit →</span>
+      </div>
+    </a>
+  `).join('')}</div>`;
+}
+
+function generic(title, intro, sections = []) {
+  return shell(
+    `<section class="page-intro">
+      <span class="eyebrow">Maison Aurelia</span>
+      <h1>${title}</h1>
+      <p>${intro}</p>
+    </section>
+    ${sections.map((section, index) => `
+      <section class="editorial ${index % 2 ? 'reverse' : ''}">
+        <div>
+          <span class="eyebrow">${section[0]}</span>
+          <h2>${section[1]}</h2>
+          <p>${section[2]}</p>
+        </div>
+        <img src="${IMAGES[index % IMAGES.length]}" width="900" height="1100" loading="lazy" alt="${section[0]} — Maison Aurelia" />
+      </section>
+    `).join('')}`,
+    title,
+    intro
+  );
+}
+
+function home() {
+  return shell(
+    `<section class="hero">
+      <div class="copy">
+        <span class="eyebrow">Fine jewellery</span>
+        <h1>Heirlooms for the moments that shine brightest.</h1>
+        <p class="lead">Discover rare diamonds, sculpted gold, and extraordinary craftsmanship designed for the extraordinary life you lead.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/collections">Shop the collection</a>
+          <a class="btn btn-secondary" href="/craft">Our craftsmanship</a>
+        </div>
+        <div class="stats">
+          <div><strong>35+</strong><span>Years craft</span></div>
+          <div><strong>4.9/5</strong><span>Client rating</span></div>
+          <div><strong>1,200</strong><span>Luxury pieces</span></div>
+        </div>
+      </div>
+      <div class="visual" aria-label="Luxury diamond jewellery hero image">
+        <div class="image-card" role="img" aria-label="Luxury diamond jewellery"></div>
+        <div class="badge">
+          <small>Signature</small>
+          <strong>18K</strong>
+        </div>
+        <div class="floating-note">
+          <strong>Crafted in Paris</strong>
+          <span>Exceptional brilliance in every detail.</span>
+        </div>
+      </div>
+    </section>
+    <section class="home-section">
+      <span class="eyebrow">The Maison edit</span>
+      <h2>A considered collection of light.</h2>
+      ${cards([
+        ['Rings', '/collections/rings'],
+        ['Necklaces', '/collections/necklaces'],
+        ['Bridal & Engagement', '/collections/bridal']
+      ])}
+    </section>`,
+    'Fine Jewellery',
+    'Heirlooms for the moments that shine brightest. Discover Maison Aurelia fine jewellery.',
+    'WebSite'
+  );
+}
+
+function collections() {
+  return shell(
+    `<section class="page-intro">
+      <span class="eyebrow">The Maison edit</span>
+      <h1>Collections</h1>
+      <p>Explore a world of sculpted gold, luminous stones and quiet, enduring forms.</p>
+    </section>
+    ${cards([
+      ['All Jewellery', '/collections'],
+      ['Rings', '/collections/rings'],
+      ['Necklaces', '/collections/necklaces'],
+      ['Earrings', '/collections/earrings'],
+      ['Bracelets', '/collections/bracelets'],
+      ['Diamond Jewellery', '/collections/diamond'],
+      ['Gold Jewellery', '/collections/gold'],
+      ['Pearl Jewellery', '/collections/pearls'],
+      ['Bridal & Engagement', '/collections/bridal']
+    ])}
+    <section class="callout">
+      <h2>Find the piece that feels like you.</h2>
+      <p>Begin with a material, a moment or a silhouette. The Maison edit is designed to be explored slowly.</p>
+      <a class="btn btn-primary" href="/contact">Speak with the Maison</a>
+    </section>`,
+    'Collections',
+    'Explore Maison Aurelia jewellery collections, from rings and necklaces to diamond, gold and bridal jewellery.',
+    'CollectionPage'
+  );
+}
+
+function collection(path) {
+  const [title, intro] = collectionRoutes[path] || ['Collection', 'A refined selection of Maison Aurelia jewellery.'];
+
+  return shell(
+    `<section class="page-intro">
+      <span class="eyebrow">Collections / ${title}</span>
+      <h1>${title}</h1>
+      <p>${intro}</p>
+    </section>
+    <section class="product-grid">
+      ${['Signature form', 'Everyday light', 'The considered detail', 'A piece to keep'].map((label, index) => `
+        <article class="product">
+          <img src="${IMAGES[index % IMAGES.length]}" width="900" height="1100" loading="lazy" alt="${title} — ${label}" />
+          <span class="eyebrow">${title}</span>
+          <h3>${label}</h3>
+          <a class="text-link" href="/contact">Enquire with the Maison →</a>
+        </article>
+      `).join('')}
+    </section>
+    <section class="related">
+      <h2>Continue exploring</h2>
+      ${cards([
+        ['All Jewellery', '/collections'],
+        ['Craft', '/craft'],
+        ['Bridal & Engagement', '/collections/bridal']
+      ])}
+    </section>`,
+    title,
+    intro,
+    'CollectionPage'
+  );
+}
+
+function journal() {
+  const articles = [
+    ['The language of light', 'A study in the way diamonds hold and release light.', '/journal/language-of-light'],
+    ['Made slowly, made to last', 'Inside the details that give a piece its presence.', '/journal/made-slowly'],
+    ['A modern way to say forever', 'Choosing jewellery for a beginning, not just a day.', '/journal/modern-forever']
+  ];
+
+  return shell(
+    `<section class="page-intro">
+      <span class="eyebrow">The Maison Journal</span>
+      <h1>Journal</h1>
+      <p>Stories of jewellery, craft, style and the rituals that make a piece yours.</p>
+    </section>
+    <div class="article-grid">
+      ${articles.map((article, index) => `
+        <a class="article" href="${article[2]}">
+          <img src="${IMAGES[index]}" width="900" height="650" loading="lazy" alt="${article[0]}" />
+          <span class="eyebrow">${['Jewellery', 'Craft', 'Weddings'][index]} · 19 Sep 2026</span>
+          <h2>${article[0]}</h2>
+          <p>${article[1]}</p>
+          <span class="text-link">Read story →</span>
+        </a>
+      `).join('')}
+    </div>`,
+    'Journal',
+    'The Maison Aurelia Journal: jewellery, craft, style, weddings, diamonds, gold, pearls and Maison stories.',
+    'CollectionPage'
+  );
+}
+
+function article(slug) {
+  const data = articleData[slug] || ['The Maison Journal', 'Maison Stories', 'A closer look at the ideas, materials and rituals behind Maison Aurelia.'];
+
+  return shell(
+    `<article class="story">
+      <span class="eyebrow">${data[1]} · 19 Sep 2026</span>
+      <h1>${data[0]}</h1>
+      <p class="lead">${data[2]}</p>
+      <img src="${IMAGE}" width="1200" height="800" alt="${data[0]} — Maison Aurelia" />
+      <div class="story-copy">
+        <p>At Maison Aurelia, every piece begins with attention: to proportion, to texture, to the way a material catches the light. We believe the most enduring jewellery leaves room for the person who wears it.</p>
+        <p>Our approach is deliberate and intimate, bringing together considered design and the quiet pleasure of exceptional detail.</p>
+        <a class="btn btn-primary" href="/collections">Explore the collections</a>
+      </div>
+    </article>`,
+    data[0],
+    data[2],
+    'Article'
+  );
+}
+
+function simple(path) {
+  const data = {
+    '/about': ['About', 'A point of view shaped by fine materials, thoughtful design and the personal meaning jewellery carries.'],
+    '/faq': ['Frequently asked questions', 'Find considered answers about the Maison, our collections and finding your piece.'],
+    '/shipping': ['Shipping', 'For guidance about delivery and your order, please contact the Maison directly.'],
+    '/returns': ['Returns', 'For return enquiries, please contact us so we can help with the next step.'],
+    '/privacy': ['Privacy', 'We respect your privacy and use information only to support your experience with Maison Aurelia.'],
+    '/terms': ['Terms', 'Please contact the Maison if you need clarification about these website terms.']
+  }[path] || ['Page not found', 'The page you requested is not available. Explore the Maison collections or return home.'];
+
+  return generic(data[0], data[1], [
+    ['The Maison', 'A considered way to begin', 'For personal assistance, our team is here to help you discover the right route.']
+  ]);
+}
+
+function contact() {
+  return shell(
+    `<section class="page-intro">
+      <span class="eyebrow">The Maison</span>
+      <h1>Contact</h1>
+      <p>For private appointments, collection enquiries or help choosing a piece, we would love to hear from you.</p>
+    </section>
+    <section class="contact-box">
+      <div>
+        <span class="eyebrow">Speak with us</span>
+        <h2>Let’s begin a conversation.</h2>
+        <p class="muted">Email or call the Maison. Our team will respond with considered guidance.</p>
+      </div>
+      <div class="contact-details">
+        <a href="mailto:agents@getservices.ai">agents@getservices.ai</a>
+        <a href="tel:3137291534">313-729-1534</a>
+      </div>
+    </section>`,
+    'Contact',
+    'Contact Maison Aurelia for collection enquiries and personal assistance.'
+  );
+}
+
+function craft() {
+  return generic(
+    'Craft',
+    'The beauty of a Maison Aurelia piece lives in the details: the balance of a line, the feel of a surface and the light held in a stone.',
+    [
+      ['The Art of Making', 'Designed by hand', 'A patient, precise approach lets each form retain its character.'],
+      ['Materials & Stones', 'Selected for their presence', 'Gold, diamonds, pearls and other materials are considered for how they live together.'],
+      ['Quality & Detail', 'The Maison standard', 'From setting to polishing, the final impression is shaped by restraint and care.']
+    ]
+  );
+}
+
+function heritage() {
+  return generic(
+    'Heritage',
+    'A modern heritage is not a date on a timeline. It is a point of view carried forward through design, material and memory.',
+    [
+      ['Our Story', 'A living point of view', 'Maison Aurelia is a space for jewellery that feels personal, enduring and present.'],
+      ['Generations of Craft', 'Knowledge in the details', 'The language of making is renewed each time a piece is imagined and worn.'],
+      ['Modern Heritage', 'Made for what comes next', 'Classic materials meet a clear, contemporary sensibility.']
+    ]
+  );
+}
+
+function render() {
+  const path = location.pathname.replace(/\/$/, '') || '/';
+
+  let html = path === '/' ? home() :
+    path === '/collections' ? collections() :
+    collectionRoutes[path] ? collection(path) :
+    path === '/craft' ? craft() :
+    path === '/heritage' ? heritage() :
+    path === '/journal' ? journal() :
+    path.startsWith('/journal/') ? article(path) :
+    path === '/contact' ? contact() :
+    simple(path);
+
+  document.querySelector('#app').innerHTML = html;
+
+  document.querySelectorAll('a[href^="/"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (link.origin === location.origin) {
+        event.preventDefault();
+        history.pushState({}, '', link.href);
+        render();
+        window.scrollTo(0, 0);
+      }
+    });
+  });
+
+  const toggle = document.querySelector('.menu-toggle');
+  const navEl = document.querySelector('.nav');
+  if (toggle && navEl) {
+    toggle.addEventListener('click', () => {
+      const isOpen = navEl.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+}
+
+window.addEventListener('popstate', render);
+render();
