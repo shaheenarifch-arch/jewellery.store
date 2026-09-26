@@ -2,181 +2,112 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Maison Aurelia | Lab Diamond &amp; Gold Jewelry Picks</title>
-<meta name="description" content="Maison Aurelia hand-picks lab-grown diamond jewelry from Omara and everyday gold bracelets and hoops from Hey Happiness. Rings, tennis bracelets, studs and more.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Luxury Lab Diamond Rings, Necklaces &amp; Gold Jewelry | Maison Aurelia</title>
+<meta name="description" content="Discover luxury lab diamond rings, necklaces, earrings and tennis bracelets, plus modern gold jewelry curated from Omara and Hey Happiness.">
 <link rel="canonical" href="https://jewllery.store/">
-<meta name="theme-color" content="#0a0a0a">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Maison Aurelia">
-<meta property="og:title" content="Maison Aurelia | Lab Diamond &amp; Gold Jewelry Picks">
-<meta property="og:description" content="Hand-picked lab diamond and gold jewelry from Omara and Hey Happiness.">
+<meta property="og:title" content="Luxury Lab Diamond Rings, Necklaces &amp; Gold Jewelry | Maison Aurelia">
+<meta property="og:description" content="An executive edit of lab-grown diamond fine jewelry and modern gold essentials from Omara and Hey Happiness.">
 <meta property="og:url" content="https://jewllery.store/">
 <meta property="og:image" content="https://jewllery.store/img/og.jpg">
+<meta property="og:image:alt" content="Maison Aurelia curated luxury jewelry collection">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" as="image" href="img/logo.webp">
+<meta name="twitter:title" content="Luxury Lab Diamond &amp; Gold Jewelry | Maison Aurelia">
+<meta name="twitter:description" content="Curated fine jewelry from Omara and modern gold essentials from Hey Happiness.">
+<meta name="twitter:image" content="https://jewllery.store/img/og.jpg">
+<link rel="preload" as="image" href="img/omara-marquise-necklace.webp" fetchpriority="high">
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#fcfaf6;color:#1a1a18;-webkit-font-smoothing:antialiased}
-h1,h2,p{margin:0}
-.serif{font-family:Georgia,"Times New Roman",serif}
-a{color:inherit}
-.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
-
-header{position:sticky;top:0;z-index:50;background:#0a0a0a;padding:10px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid rgba(212,175,55,.22)}
-.logo-box{width:52px;height:52px;flex:none;border-radius:50%;background:#f5f1e8;box-shadow:0 0 0 2px #d4af37,0 0 16px rgba(212,175,55,.3);overflow:hidden}
-.logo-box img{width:100%;height:100%;object-fit:cover;display:block}
-.brand{letter-spacing:.3em;font-weight:700;font-size:15px;color:#f5f1e8;text-decoration:none}
-.brand small{display:block;font-size:10px;letter-spacing:.24em;color:#cfc6b0;margin-top:3px;font-weight:400}
-
-.notice{background:#141412;color:#cfc6b0;font-size:12px;text-align:center;padding:8px 16px;line-height:1.5}
-.notice a{color:#d4af37}
-
-.hero{background:#0a0a0a;color:#f5f1e8;text-align:center;padding:36px 20px 32px}
-.hero h1{font-size:clamp(28px,6vw,42px);font-weight:400}
-.hero h1 em{color:#d4af37}
-.hero p{margin-top:10px;font-size:14px;color:#cfc6b0;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.55}
-
-section{border-top:1px solid rgba(212,175,55,.14)}
-.section-head{max-width:1240px;margin:0 auto;padding:40px 20px 18px;text-align:center}
-.label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#6b6556}
-.section-head h2{font-size:clamp(22px,4vw,28px);font-weight:400;margin-top:6px}
-.section-head p{font-size:13px;margin-top:6px;color:#6b6556}
-
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:1240px;margin:0 auto;padding:0 16px 48px}
-@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr);gap:18px;padding:0 20px 56px}}
-
-.card{border-radius:20px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(26,26,24,.08);transition:transform .35s,box-shadow .35s}
-.card:hover,.card:focus-visible{transform:translateY(-4px);box-shadow:0 20px 40px -16px rgba(0,0,0,.25)}
-.card:focus-visible{outline:2px solid #d4af37;outline-offset:2px}
-.card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block;background:#f2eee6}
-.meta{padding:12px 14px 16px;display:flex;flex-direction:column;flex:1}
-.small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6b6556;margin-bottom:4px}
-.name{font-size:15px;line-height:1.3}
-.price{margin-top:auto;padding-top:8px;font-weight:700;font-size:14px}
-.cta{font-size:12px;color:#8a6d1c;margin-top:4px}
-
-.dark{background:#0d0d0c;color:#f5f1e8}
-.dark .label{color:#d4af37}
-.dark .section-head p{color:#b9b19c}
-.dark .card{background:#161614;border-color:rgba(245,241,232,.1)}
-.dark .small{color:#b9b19c}
-.dark .cta{color:#d4af37}
-.dark .card img{background:#fff}
-
-.promo{background:linear-gradient(135deg,#f5f1e8,#e8e0c8)!important;color:#111!important;align-items:center;justify-content:center;text-align:center;min-height:240px;padding:20px;border:1px solid #d4af37!important}
-.promo .small{color:#5a4a1a!important}
-.promo .big{font-size:clamp(20px,4vw,26px);line-height:1.1;margin:6px 0 12px}
-.pill{border:1px solid #111;padding:8px 16px;border-radius:20px;font-size:12px;letter-spacing:.08em;display:inline-block}
-
-.fineprint{max-width:1240px;margin:-28px auto 0;padding:0 20px 40px;font-size:12px;text-align:center;color:#6b6556}
-.dark .fineprint{color:#9d967f}
-
-footer{background:#080807;color:#f5f1e8;padding:36px 20px 24px;border-top:1px solid rgba(212,175,55,.14)}
-footer .inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;font-size:13px;line-height:1.6}
-.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-footer h3{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 8px;color:#d4af37;font-weight:600}
-footer p{color:#cfc6b0}
-footer a{color:#f5f1e8}
-.copy{max-width:1240px;margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(245,241,232,.08);font-size:12px;color:#9d967f;text-align:center}
-
-@media(max-width:400px){
- header{padding:8px 14px;gap:10px}
- .logo-box{width:42px;height:42px}
- .brand{font-size:13px;letter-spacing:.2em}
- .brand small{font-size:9px;letter-spacing:.16em}
- .name{font-size:14px}
-}
-@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+:root{--ink:#090909;--coal:#11110f;--ivory:#f5f0e6;--paper:#fbf8f2;--gold:#c9a45d;--gold2:#e4c988;--taupe:#afa38e;--line:rgba(201,164,93,.28);--serif:"Iowan Old Style","Baskerville","Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:#171713;font-family:var(--sans);-webkit-font-smoothing:antialiased}body.menu-open{overflow:hidden}img{max-width:100%;display:block}a{color:inherit}.skip{position:fixed;left:-9999px;top:12px;z-index:1000;background:white;padding:10px 14px}.skip:focus{left:12px}.eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--gold)}.display{font-family:var(--serif);font-weight:400;letter-spacing:-.025em}.shell{width:min(1280px,calc(100% - 40px));margin:auto}.notice{background:#050505;color:#bfb6a6;text-align:center;padding:8px 20px;font-size:10px;letter-spacing:.06em}.notice a{color:var(--gold2)}
+.site-header{position:absolute;top:32px;left:0;width:100%;z-index:50;color:white;border-bottom:1px solid rgba(255,255,255,.14);transition:.35s}.site-header.scrolled{position:fixed;top:0;background:rgba(7,7,7,.94);backdrop-filter:blur(18px)}.header-inner{height:86px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}.nav{display:flex;gap:26px}.nav a,.header-action{font-size:10px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}.nav a:hover,.header-action:hover{color:var(--gold2)}.brand{text-align:center;text-decoration:none}.brand-main{font-family:var(--serif);font-size:20px;letter-spacing:.26em}.brand-sub{display:block;margin-top:3px;font-size:8px;letter-spacing:.32em;color:#c9c0ae}.header-actions{display:flex;justify-content:flex-end;align-items:center;gap:18px}.menu-btn{display:none;background:none;border:0;color:white;padding:8px;cursor:pointer}.menu-btn span{display:block;width:25px;height:1px;background:currentColor;margin:6px}
+.hero{min-height:100svh;position:relative;display:grid;place-items:center;color:white;overflow:hidden;background:#050505}.hero-media{position:absolute;inset:0}.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center}.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.25) 55%,rgba(0,0,0,.45)),linear-gradient(0deg,rgba(0,0,0,.48),transparent 50%)}.hero-content{position:relative;z-index:2;width:min(1280px,calc(100% - 40px));padding-top:100px}.hero-copy{max-width:710px}.hero h1{font:400 clamp(52px,7.2vw,108px)/.88 var(--serif);letter-spacing:-.045em;margin:18px 0 28px}.hero h1 em{display:block;color:var(--gold2);font-style:italic}.hero p{max-width:560px;color:#d6d0c4;font-size:14px;line-height:1.8}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:1px solid var(--gold);text-decoration:none;font-size:10px;letter-spacing:.18em;text-transform:uppercase;transition:.25s}.btn-gold{background:var(--gold);color:#080808}.btn-gold:hover{background:var(--gold2);border-color:var(--gold2)}.btn-ghost{color:white;background:rgba(0,0,0,.15)}.btn-ghost:hover{background:white;color:#111;border-color:white}.scroll-note{position:absolute;bottom:28px;right:4%;z-index:2;font-size:9px;letter-spacing:.22em;text-transform:uppercase;writing-mode:vertical-rl;color:#c8c0b0}
+.intro{padding:130px 0;background:var(--paper)}.intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:9vw;align-items:center}.intro-visual{position:relative;padding:0 0 70px 9%}.intro-visual:before{content:"";position:absolute;left:0;top:70px;width:69%;height:calc(100% - 60px);border:1px solid var(--gold)}.intro-visual img{position:relative;width:88%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 25px 70px rgba(35,25,10,.17)}.intro-mark{position:absolute;right:0;bottom:0;width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--gold2);font:italic 25px var(--serif);text-align:center}.intro-copy h2{font-size:clamp(43px,5vw,78px);line-height:.98;margin:14px 0 30px}.intro-copy p{max-width:610px;color:#645d51;line-height:1.85;font-size:14px}.text-link{display:inline-flex;margin-top:28px;text-decoration:none;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding-bottom:7px;border-bottom:1px solid currentColor}
+.omara{background:var(--ink);color:white;padding:120px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:50px}.section-head h2{font-size:clamp(45px,6vw,82px);line-height:.92;margin:12px 0 0}.section-head p{max-width:440px;color:#aaa290;line-height:1.75;font-size:13px}.omara-layout{display:grid;grid-template-columns:1.45fr .92fr;gap:22px}.feature{position:relative;min-height:690px;overflow:hidden}.feature img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s}.feature:hover img{transform:scale(1.035)}.feature:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.78),transparent 60%)}.feature-copy{position:absolute;left:42px;right:42px;bottom:38px;z-index:2}.feature-copy h3{font:400 clamp(34px,4vw,60px)/1 var(--serif);margin:8px 0}.feature-copy p{color:#cfc7b8;font-size:12px}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.product{background:#151513;text-decoration:none;overflow:hidden;display:flex;flex-direction:column}.product-image{overflow:hidden;background:#f5f3ed;aspect-ratio:1}.product img{width:100%;height:100%;object-fit:cover;transition:.7s}.product:hover img{transform:scale(1.06)}.product-body{padding:20px;display:flex;flex-direction:column;flex:1}.product-brand{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}.product h3{font:400 20px/1.15 var(--serif);margin:8px 0}.product-price{font-size:11px;color:#b9b1a2;margin-top:auto;padding-top:10px}.product-arrow{margin-top:9px;color:var(--gold2);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.hh{padding:130px 0;background:#eee7da}.hh-top{display:grid;grid-template-columns:1fr 1.2fr;gap:8vw;align-items:center;margin-bottom:70px}.hh-copy h2{font-size:clamp(46px,6vw,84px);line-height:.91;margin:14px 0 27px}.hh-copy p{color:#625b4e;line-height:1.8;font-size:14px}.hh-visual{display:grid;grid-template-columns:1fr .72fr;gap:18px;align-items:end}.hh-visual img:first-child{aspect-ratio:4/5;object-fit:cover}.hh-visual img:last-child{aspect-ratio:3/4;object-fit:cover;margin-bottom:-45px}.hh-products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.hh .product{background:#f9f6ef;border:1px solid rgba(70,55,28,.1)}.hh .product-price{color:#6a6254}.hh .product-arrow{color:#7e611f}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:670px}.split-card{position:relative;display:flex;align-items:flex-end;padding:65px;color:white;overflow:hidden;text-decoration:none}.split-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:1s}.split-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.77),rgba(0,0,0,.08))}.split-card:hover img{transform:scale(1.04)}.split-content{position:relative;z-index:2}.split-content h2{font-size:clamp(42px,5vw,72px);margin:9px 0}.split-content p{font-size:12px;color:#ddd4c4}.split-content span{display:inline-block;margin-top:22px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:7px}
+.journal{padding:125px 0;background:var(--paper)}.journal-head{text-align:center;max-width:720px;margin:0 auto 55px}.journal-head h2{font-size:clamp(45px,6vw,76px);margin:12px 0}.journal-head p{color:#6e6658;line-height:1.8;font-size:13px}.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#c9c0af;border:1px solid #c9c0af}.article{background:var(--paper);padding:38px;min-height:280px;text-decoration:none;display:flex;flex-direction:column;transition:.3s}.article:hover{background:#111;color:white}.article-num{font:italic 18px var(--serif);color:var(--gold)}.article h3{font:400 28px/1.05 var(--serif);margin:45px 0 16px}.article p{font-size:12px;color:#71695d;line-height:1.7}.article:hover p{color:#bbb3a4}.article span{margin-top:auto;font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+.values{background:#111;color:white;padding:85px 0}.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:45px}.value{border-top:1px solid var(--line);padding-top:24px}.value-num{color:var(--gold);font:italic 22px var(--serif)}.value h3{font:400 22px var(--serif);margin:18px 0 9px}.value p{font-size:11px;line-height:1.7;color:#aaa292}
+.newsletter{background:var(--gold);color:#0b0b09;padding:90px 20px;text-align:center}.newsletter h2{font-size:clamp(44px,6vw,76px);margin:10px 0}.newsletter p{font-size:13px;max-width:550px;margin:0 auto 28px;line-height:1.7}.newsletter-form{display:flex;max-width:560px;margin:auto;border-bottom:1px solid #171713}.newsletter-form input{flex:1;border:0;background:transparent;padding:16px 4px;outline:0;font:12px var(--sans)}.newsletter-form button{border:0;background:transparent;text-transform:uppercase;letter-spacing:.18em;font-size:9px;cursor:pointer}
+footer{background:#070707;color:white;padding:80px 0 30px}.footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:60px}.footer-brand{font:400 31px var(--serif);letter-spacing:.14em}.footer-intro{color:#888173;font-size:12px;line-height:1.8;max-width:330px;margin-top:20px}.footer-col h3{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 20px}.footer-col a,.footer-col p{display:block;text-decoration:none;color:#aaa396;font-size:11px;line-height:2}.footer-col a:hover{color:white}.footer-bottom{border-top:1px solid #222;margin-top:65px;padding-top:24px;display:flex;justify-content:space-between;color:#6f6a61;font-size:9px;letter-spacing:.09em}.mobile-panel{display:none}
+@media(max-width:980px){.header-inner{grid-template-columns:auto 1fr auto}.nav,.header-action{display:none}.brand{text-align:left;margin-left:16px}.menu-btn{display:block}.hero-content{padding-top:130px}.intro-grid,.hh-top{grid-template-columns:1fr;gap:70px}.omara-layout{grid-template-columns:1fr}.feature{min-height:610px}.hh-products{grid-template-columns:repeat(2,1fr)}.journal-grid{grid-template-columns:1fr 1fr}.values-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.mobile-panel{display:flex;position:fixed;inset:0;z-index:49;background:#080808;color:white;padding:140px 30px 50px;flex-direction:column;gap:26px;transform:translateX(-100%);transition:.35s}.mobile-panel.open{transform:translateX(0)}.mobile-panel a{font:400 34px var(--serif);text-decoration:none}.site-header{top:32px}}
+@media(max-width:650px){.shell{width:min(100% - 28px,1280px)}.notice{font-size:8px}.site-header{top:30px}.header-inner{height:70px}.brand-main{font-size:16px}.hero{min-height:820px}.hero-media img{object-position:60% center}.hero h1{font-size:55px}.hero-copy{padding-top:90px}.hero p{font-size:12px;max-width:84%}.btn{width:100%}.intro,.omara,.hh,.journal{padding:85px 0}.intro-visual{padding:0 0 48px}.intro-mark{width:110px;height:110px;font-size:19px}.section-head{display:block}.section-head p{margin-top:25px}.feature{min-height:580px}.feature-copy{left:24px;right:24px;bottom:28px}.mini-grid,.hh-products{grid-template-columns:1fr 1fr;gap:10px}.product-body{padding:14px}.product h3{font-size:17px}.hh-visual{gap:10px}.split{grid-template-columns:1fr;min-height:auto}.split-card{min-height:570px;padding:35px 24px}.journal-grid{grid-template-columns:1fr}.article{min-height:240px}.values-grid,.footer-grid{grid-template-columns:1fr}.newsletter-form{display:block;border:0}.newsletter-form input{width:100%;border-bottom:1px solid #171713;text-align:center}.newsletter-form button{margin-top:20px}.footer-bottom{display:block;line-height:2}.scroll-note{display:none}}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
- {"@type":"WebSite","name":"Maison Aurelia","url":"https://jewllery.store/"},
- {"@type":"Organization","name":"Maison Aurelia","url":"https://jewllery.store/","logo":"https://jewllery.store/img/logo.webp","email":"agents@getservices.ai"},
- {"@type":"ItemList","name":"Maison Aurelia jewelry picks","itemListElement":[
-  {"@type":"ListItem","position":1,"name":"Marquise Claw Prong Lab Diamond Necklace","image":"https://jewllery.store/img/omara-marquise-necklace.webp"},
-  {"@type":"ListItem","position":2,"name":"14K Yellow Gold Diamond Hoops 1.00ct","image":"https://jewllery.store/img/omara-yellow-gold-hoops.webp"},
-  {"@type":"ListItem","position":3,"name":"Timeless Solitaire Ring","image":"https://jewllery.store/img/omara-solitaire-ring.webp"},
-  {"@type":"ListItem","position":4,"name":"Princess Tennis Bracelet 5.00ct Lab Diamond","image":"https://jewllery.store/img/omara-tennis-bracelet.webp"},
-  {"@type":"ListItem","position":5,"name":"Radiant Diamond Stud Earrings","image":"https://jewllery.store/img/omara-diamond-studs.webp"},
-  {"@type":"ListItem","position":6,"name":"Petal Link Open Bangle, Gold","image":"https://jewllery.store/img/petal-link-bangle.webp"},
-  {"@type":"ListItem","position":7,"name":"Dainty Rolo Chain Bracelet","image":"https://jewllery.store/img/dainty-rolo-bracelet.webp"},
-  {"@type":"ListItem","position":8,"name":"Slim Hoops, Black Marble","image":"https://jewllery.store/img/slim-hoops-black-marble.webp"},
-  {"@type":"ListItem","position":9,"name":"Plain Hoop Earrings, Gold","image":"https://jewllery.store/img/plain-hoops-gold.webp"},
-  {"@type":"ListItem","position":10,"name":"Textured Link Chain Bracelet","image":"https://jewllery.store/img/textured-link-bracelet.webp"}
- ]}
-]}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Maison Aurelia","url":"https://jewllery.store/"},{"@type":"Organization","name":"Maison Aurelia","url":"https://jewllery.store/","logo":"https://jewllery.store/img/logo.webp","email":"agents@getservices.ai"},{"@type":"CollectionPage","name":"Luxury Lab Diamond and Gold Jewelry","url":"https://jewllery.store/","description":"Curated lab diamond fine jewelry and modern gold essentials from Omara and Hey Happiness."}]}</script>
 </head>
 <body>
-<a class="skip" href="#omara">Skip to products</a>
-
-<header>
- <div class="logo-box"><img src="img/logo.webp" width="52" height="52" alt="Maison Aurelia logo"></div>
- <a class="brand serif" href="/">MAISON AURELIA<small>FINE &amp; EVERYDAY JEWELRY</small></a>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="notice">Independent jewelry curation. We may earn a commission from qualifying purchases. <a href="affiliate-disclosure.html">Affiliate disclosure</a></div>
+<header class="site-header" id="header">
+ <div class="shell header-inner">
+  <nav class="nav" aria-label="Primary"><a href="#collections">Collections</a><a href="#journal">Journal</a><a href="about.html">Our Maison</a></nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  <a class="brand" href="/" aria-label="Maison Aurelia homepage"><span class="brand-main">MAISON AURELIA</span><span class="brand-sub">FINE JEWELRY EDIT</span></a>
+  <div class="header-actions"><a class="header-action" href="contact.html">Private Enquiries</a></div>
+ </div>
 </header>
-
-<p class="notice">We may earn a commission when you buy through links on this page, at no extra cost to you. <a href="#disclosure">Learn more</a></p>
-
-<div class="hero">
- <h1 class="serif">Today's <em>Specials</em></h1>
- <p>Lab-grown diamonds from Omara and everyday gold pieces from Hey Happiness, hand-picked for Fall 2026.</p>
-</div>
-
-<main>
-<section class="dark" id="omara" aria-labelledby="omara-h">
- <div class="section-head">
-  <div class="label">Fine Jewelry · Lab-Grown Diamonds</div>
-  <h2 class="serif" id="omara-h"><em>Omara</em> Jewelry</h2>
-  <p>Certified lab diamonds, handcrafted in Europe</p>
- </div>
- <div class="grid">
-  <a class="card" href="https://www.awin1.com/cread.php?s=4774152&amp;v=122380&amp;q=590536&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/omara-marquise-necklace.webp" alt="Rose gold necklace with a marquise-cut lab diamond in a claw-prong setting"><div class="meta"><div class="small">Omara · Necklaces</div><div class="name serif">Marquise Claw Prong Lab Diamond Necklace</div><div class="price">From $890</div><div class="cta">View at Omara →</div></div></a>
-  <a class="card" href="https://www.awin1.com/cread.php?s=4774156&amp;v=122380&amp;q=590536&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/omara-yellow-gold-hoops.webp" alt="14K yellow gold hoop earrings set with a row of round diamonds"><div class="meta"><div class="small">Omara · Earrings</div><div class="name serif">14K Yellow Gold Diamond Hoops 1.00ct</div><div class="price">From $1,240</div><div class="cta">View at Omara →</div></div></a>
-  <a class="card" href="https://www.awin1.com/cread.php?s=4774158&amp;v=122380&amp;q=590536&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/omara-solitaire-ring.webp" alt="Yellow gold solitaire engagement ring with a radiant-cut diamond"><div class="meta"><div class="small">Omara · Rings</div><div class="name serif">Timeless Solitaire Ring</div><div class="price">From $1,890</div><div class="cta">View at Omara →</div></div></a>
-  <a class="card" href="https://www.awin1.com/cread.php?s=4774160&amp;v=122380&amp;q=590536&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/omara-tennis-bracelet.webp" alt="White gold tennis bracelet lined with princess-cut lab diamonds"><div class="meta"><div class="small">Omara · Bracelets</div><div class="name serif">Princess Tennis Bracelet 5.00ct Lab Diamond</div><div class="price">From $2,890</div><div class="cta">View at Omara →</div></div></a>
-  <a class="card" href="https://www.awin1.com/cread.php?s=4729637&amp;v=122380&amp;q=589762&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/omara-diamond-studs.webp" alt="Round diamond stud earrings with a halo of smaller diamonds"><div class="meta"><div class="small">Omara · Earrings</div><div class="name serif">Radiant Diamond Stud Earrings</div><div class="price">From $1,450</div><div class="cta">View at Omara →</div></div></a>
-  <a class="card promo" href="https://www.awin1.com/awclick.php?gid=589762&amp;mid=122380&amp;awinaffid=3067297&amp;linkid=4778940&amp;clickref=" target="_blank" rel="sponsored nofollow noopener"><div><div class="small">Omara · Bestseller</div><div class="big serif">Get a Free<br>Ring Sizer</div><span class="pill">CLAIM FREE →</span></div></a>
- </div>
- <p class="fineprint">Prices are approximate USD conversions and may change. Check the final price on the retailer's site.</p>
+<div class="mobile-panel" id="mobileMenu"><a href="#collections">Collections</a><a href="#journal">Journal</a><a href="about.html">Our Maison</a><a href="contact.html">Contact</a></div>
+<main id="main">
+<section class="hero">
+ <div class="hero-media"><img src="img/omara-marquise-necklace.webp" alt="Rose gold marquise-cut lab diamond necklace" width="1200" height="1200"></div>
+ <div class="hero-content"><div class="hero-copy"><div class="eyebrow">The Autumn 2026 Jewelry Edit</div><h1>Curated Diamond <em>&amp; Gold Jewelry</em></h1><p>Exceptional lab-grown diamond fine jewelry from Omara meets the refined, modern gold essentials of Hey Happiness. Selected for distinction, craftsmanship and enduring style.</p><div class="actions"><a class="btn btn-gold" href="#collections">Discover the Edit</a><a class="btn btn-ghost" href="lab-diamond-buying-guide.html">Read the Diamond Guide</a></div></div></div>
+ <div class="scroll-note">Scroll to discover</div>
 </section>
-
-<section id="hey-happiness" aria-labelledby="hh-h">
- <div class="section-head">
-  <div class="label">Everyday Gold · Fall 2026 Edit</div>
-  <h2 class="serif" id="hh-h"><em>Hey Happiness</em></h2>
-  <p>Modern, stackable pieces for every day</p>
+<section class="intro">
+ <div class="shell intro-grid">
+  <div class="intro-visual"><img src="img/textured-link-bracelet.webp" alt="Textured gold link bracelet styled against dark velvet" loading="lazy"><div class="intro-mark">The<br>Maison<br>Edit</div></div>
+  <div class="intro-copy"><div class="eyebrow">The Maison Aurelia Point of View</div><h2 class="display">Modern heirlooms,<br>chosen with intention.</h2><p>Maison Aurelia is an independent destination for discerning jewelry discovery. The collection brings together the precise brilliance of Omara's lab-grown diamonds and the effortless sophistication of Hey Happiness gold jewelry. Every selection is presented through an editorial lens, with emphasis on proportion, finish, versatility and enduring appeal.</p><a class="text-link" href="about.html">Discover our curation philosophy &nbsp;→</a></div>
  </div>
- <div class="grid">
-  <a class="card" href="https://www.awin1.com/cread.php?s=4639833&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/petal-link-bangle.webp" alt="Woman's wrist wearing a delicate gold link bracelet"><div class="meta"><div class="small">Hey Happiness · Bracelets</div><div class="name serif">Petal Link Open Bangle, Gold</div><div class="price">$43.90</div><div class="cta">View at Hey Happiness →</div></div></a>
-  <a class="card" href="https://www.awin1.com/cread.php?s=4639835&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/dainty-rolo-bracelet.webp" alt="Gold rolo chain bracelet on a gold tray"><div class="meta"><div class="small">Hey Happiness · Bracelets</div><div class="name serif">Dainty Rolo Chain Bracelet</div><div class="price">$32.90</div><div class="cta">View at Hey Happiness →</div></div></a>
-  <a class="card" href="https://www.awin1.com/cread.php?s=4639840&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/slim-hoops-black-marble.webp" alt="Slim rose gold hoop earrings on black marble"><div class="meta"><div class="small">Hey Happiness · Earrings</div><div class="name serif">Slim Hoops, Black Marble</div><div class="price">$39.50</div><div class="cta">View at Hey Happiness →</div></div></a>
-  <a class="card" href="https://www.awin1.com/cread.php?s=4639847&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/plain-hoops-gold.webp" alt="Pair of plain gold hoop earrings"><div class="meta"><div class="small">Hey Happiness · Earrings</div><div class="name serif">Plain Hoop Earrings, Gold</div><div class="price">$32.90</div><div class="cta">View at Hey Happiness →</div></div></a>
-  <a class="card" href="https://www.awin1.com/cread.php?s=4759033&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img loading="lazy" decoding="async" width="600" height="600" src="img/textured-link-bracelet.webp" alt="Wrist wearing a chunky textured gold link chain bracelet"><div class="meta"><div class="small">Hey Happiness · Bracelets</div><div class="name serif">Textured Link Chain Bracelet</div><div class="price">$32.90</div><div class="cta">View at Hey Happiness →</div></div></a>
-  <a class="card promo" href="https://www.awin1.com/cread.php?awinmid=111366&amp;awinaffid=3067297&amp;ued=https%3A%2F%2Fheyhappiness.com%2F" target="_blank" rel="sponsored nofollow noopener"><div><div class="small">Hey Happiness · Full Collection</div><div class="big serif">Shop the<br>Whole Edit</div><span class="pill">BROWSE ALL →</span></div></a>
- </div>
- <p class="fineprint">Prices shown in USD at time of listing and may change.</p>
 </section>
+<section class="omara" id="collections">
+ <div class="shell"><div class="section-head"><div><div class="eyebrow">Fine Jewelry House · Omara</div><h2 class="display">Lab-grown brilliance.</h2></div><p>Architectural settings, distinguished cuts and certified lab-grown diamonds form a collection created for defining moments.</p></div>
+ <div class="omara-layout">
+  <a class="feature" href="https://www.awin1.com/cread.php?s=4774152&amp;v=122380&amp;q=590536&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><img src="img/omara-marquise-necklace.webp" alt="Marquise claw-prong lab diamond necklace by Omara" loading="lazy"><div class="feature-copy"><div class="eyebrow">The Signature Selection</div><h3>Marquise Diamond Necklace</h3><p>Rose gold · Lab-grown diamond · From $890</p><span class="text-link">View at Omara →</span></div></a>
+  <div class="mini-grid">
+   <a class="product" href="https://www.awin1.com/cread.php?s=4774158&amp;v=122380&amp;q=590536&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><div class="product-image"><img src="img/omara-solitaire-ring.webp" alt="Yellow gold radiant-cut solitaire engagement ring" loading="lazy"></div><div class="product-body"><div class="product-brand">Omara · Rings</div><h3>Timeless Solitaire Ring</h3><div class="product-price">From $1,890</div><div class="product-arrow">Discover →</div></div></a>
+   <a class="product" href="https://www.awin1.com/cread.php?s=4774160&amp;v=122380&amp;q=590536&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><div class="product-image"><img src="img/omara-tennis-bracelet.webp" alt="Princess-cut lab diamond tennis bracelet" loading="lazy"></div><div class="product-body"><div class="product-brand">Omara · Bracelets</div><h3>Princess Tennis Bracelet</h3><div class="product-price">From $2,890</div><div class="product-arrow">Discover →</div></div></a>
+   <a class="product" href="https://www.awin1.com/cread.php?s=4729637&amp;v=122380&amp;q=589762&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><div class="product-image"><img src="img/omara-diamond-studs.webp" alt="Round halo diamond stud earrings" loading="lazy"></div><div class="product-body"><div class="product-brand">Omara · Earrings</div><h3>Radiant Diamond Studs</h3><div class="product-price">From $1,450</div><div class="product-arrow">Discover →</div></div></a>
+   <a class="product" href="https://www.awin1.com/cread.php?s=4774156&amp;v=122380&amp;q=590536&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><div class="product-image"><img src="img/omara-yellow-gold-hoops.webp" alt="Yellow gold hoops set with round diamonds" loading="lazy"></div><div class="product-body"><div class="product-brand">Omara · Earrings</div><h3>Diamond Gold Hoops</h3><div class="product-price">From $1,240</div><div class="product-arrow">Discover →</div></div></a>
+  </div>
+ </div></div>
+</section>
+<section class="hh">
+ <div class="shell"><div class="hh-top"><div class="hh-copy"><div class="eyebrow">Everyday Luxury · Hey Happiness</div><h2 class="display">Gold, styled<br>for every day.</h2><p>Contemporary gold jewelry with an uncomplicated point of view. Refined hoops, tactile chains and versatile bracelets designed to layer naturally and move effortlessly from day to evening.</p><a class="text-link" href="https://www.awin1.com/cread.php?awinmid=111366&amp;awinaffid=3067297&amp;ued=https%3A%2F%2Fheyhappiness.com%2F" target="_blank" rel="sponsored nofollow noopener">Explore Hey Happiness →</a></div><div class="hh-visual"><img src="img/plain-hoops-gold.webp" alt="Polished gold hoop earrings" loading="lazy"><img src="img/petal-link-bangle.webp" alt="Delicate gold link bracelet" loading="lazy"></div></div>
+ <div class="hh-products">
+  <a class="product" href="https://www.awin1.com/cread.php?s=4639833&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><div class="product-image"><img src="img/petal-link-bangle.webp" alt="Petal Link Open Bangle in gold" loading="lazy"></div><div class="product-body"><div class="product-brand">Hey Happiness · Bracelets</div><h3>Petal Link Open Bangle</h3><div class="product-price">$43.90</div><div class="product-arrow">Shop the piece →</div></div></a>
+  <a class="product" href="https://www.awin1.com/cread.php?s=4639835&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><div class="product-image"><img src="img/dainty-rolo-bracelet.webp" alt="Dainty Rolo chain bracelet in gold" loading="lazy"></div><div class="product-body"><div class="product-brand">Hey Happiness · Bracelets</div><h3>Dainty Rolo Chain Bracelet</h3><div class="product-price">$32.90</div><div class="product-arrow">Shop the piece →</div></div></a>
+  <a class="product" href="https://www.awin1.com/cread.php?s=4639847&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><div class="product-image"><img src="img/plain-hoops-gold.webp" alt="Plain polished gold hoop earrings" loading="lazy"></div><div class="product-body"><div class="product-brand">Hey Happiness · Earrings</div><h3>Plain Hoop Earrings</h3><div class="product-price">$32.90</div><div class="product-arrow">Shop the piece →</div></div></a>
+  <a class="product" href="https://www.awin1.com/cread.php?s=4759033&amp;v=111366&amp;q=564949&amp;r=3067297" target="_blank" rel="sponsored nofollow noopener"><div class="product-image"><img src="img/textured-link-bracelet.webp" alt="Textured gold link chain bracelet" loading="lazy"></div><div class="product-body"><div class="product-brand">Hey Happiness · Bracelets</div><h3>Textured Link Bracelet</h3><div class="product-price">$32.90</div><div class="product-arrow">Shop the piece →</div></div></a>
+ </div></div>
+</section>
+<section class="split" aria-label="Partner collections">
+ <a class="split-card" href="https://www.awin1.com/awclick.php?gid=589762&amp;mid=122380&amp;awinaffid=3067297&amp;linkid=4778940&amp;clickref=" target="_blank" rel="sponsored nofollow noopener"><img src="img/omara-solitaire-ring.webp" alt="Omara lab diamond solitaire ring" loading="lazy"><div class="split-content"><div class="eyebrow">The Fine Jewelry House</div><h2 class="display">Omara</h2><p>Certified lab-grown diamonds and European craftsmanship.</p><span>Explore the collection →</span></div></a>
+ <a class="split-card" href="https://www.awin1.com/cread.php?awinmid=111366&amp;awinaffid=3067297&amp;ued=https%3A%2F%2Fheyhappiness.com%2F" target="_blank" rel="sponsored nofollow noopener"><img src="img/textured-link-bracelet.webp" alt="Hey Happiness textured gold bracelet" loading="lazy"><div class="split-content"><div class="eyebrow">The Everyday Gold Edit</div><h2 class="display">Hey Happiness</h2><p>Modern jewelry designed for effortless layering.</p><span>Explore the collection →</span></div></a>
+</section>
+<section class="journal" id="journal">
+ <div class="shell"><div class="journal-head"><div class="eyebrow">The Maison Journal</div><h2 class="display">Knowledge, beautifully considered.</h2><p>Independent guides to diamonds, settings, proportions and jewelry styling, created to support a more confident purchase.</p></div>
+ <div class="journal-grid">
+  <a class="article" href="lab-diamond-buying-guide.html"><div class="article-num">01</div><h3>Lab-Grown Diamond Buying Guide</h3><p>Understand the 4Cs, certification and how to compare stones beyond carat weight.</p><span>Read the guide →</span></a>
+  <a class="article" href="best-lab-diamond-rings.html"><div class="article-num">02</div><h3>How to Select a Diamond Ring</h3><p>A considered look at cuts, settings, metals and practical wear.</p><span>Read the guide →</span></a>
+  <a class="article" href="tennis-bracelet-guide.html"><div class="article-num">03</div><h3>The Tennis Bracelet Guide</h3><p>Stone consistency, clasp security, sizing and styling explored.</p><span>Read the guide →</span></a>
+  <a class="article" href="diamond-earrings-guide.html"><div class="article-num">04</div><h3>Choosing Diamond Earrings</h3><p>Studs, hoops, settings and backings for everyday and occasion wear.</p><span>Read the guide →</span></a>
+  <a class="article" href="gold-hoop-earrings.html"><div class="article-num">05</div><h3>The Gold Hoops Edit</h3><p>Scale, finish, closure and material details that define the right pair.</p><span>Read the guide →</span></a>
+  <a class="article" href="jewelry-gift-guide.html"><div class="article-num">06</div><h3>The Jewelry Gift Guide</h3><p>Meaningful selections with sizing, delivery and returns in mind.</p><span>Read the guide →</span></a>
+ </div></div>
+</section>
+<section class="values"><div class="shell values-grid"><div class="value"><div class="value-num">I</div><h3>Editorial Curation</h3><p>A focused selection rather than an endless product catalog.</p></div><div class="value"><div class="value-num">II</div><h3>Independent Brands</h3><p>Distinctive jewelry from Omara and Hey Happiness.</p></div><div class="value"><div class="value-num">III</div><h3>Transparent Guidance</h3><p>Clear affiliate disclosure and directly linked retailer pricing.</p></div><div class="value"><div class="value-num">IV</div><h3>Considered Selection</h3><p>Design, material, versatility and craftsmanship guide every edit.</p></div></div></section>
+<section class="newsletter"><div class="eyebrow" style="color:#3d301a">Private Notes from the Maison</div><h2 class="display">Enter the inner circle.</h2><p>Receive new jewelry edits, independent buying guides and selected offers. No noise, only considered recommendations.</p><form class="newsletter-form" action="#" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you';"><label class="skip" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required><button type="submit">Request Access →</button></form></section>
 </main>
-
-<footer>
- <div class="inner">
-  <div>
-   <div class="footer-logo"><div class="logo-box"><img loading="lazy" src="img/logo.webp" width="52" height="52" alt=""></div><div class="serif" style="letter-spacing:.2em;font-weight:700;font-size:13px">MAISON AURELIA</div></div>
-   <p>Hand-picked fine and everyday jewelry from trusted independent brands.</p>
-  </div>
-  <div>
-   <h3>Contact</h3>
-   <p>Email: <a href="mailto:agents@getservices.ai">agents@getservices.ai</a><br>Phone: <a href="tel:+13137291534">313-729-1534</a></p>
-  </div>
-  <div id="disclosure">
-   <h3>Affiliate Disclosure</h3>
-   <p>Maison Aurelia is reader-supported. Some links on this page are affiliate links, including through the Awin network. If you buy through them we may earn a commission, at no extra cost to you. We don't sell products directly; orders, shipping and returns are handled by each retailer.</p>
-  </div>
- </div>
- <div class="copy">© 2026 Maison Aurelia · jewllery.store</div>
-</footer>
-</body>
-</html>
+<footer><div class="shell"><div class="footer-grid"><div><div class="footer-brand">MAISON AURELIA</div><p class="footer-intro">An independent editorial destination for lab-grown diamond fine jewelry and modern gold essentials.</p></div><div class="footer-col"><h3>Collections</h3><a href="#collections">Omara Fine Jewelry</a><a href="https://www.awin1.com/cread.php?awinmid=111366&amp;awinaffid=3067297&amp;ued=https%3A%2F%2Fheyhappiness.com%2F" rel="sponsored nofollow noopener" target="_blank">Hey Happiness</a><a href="jewelry-gift-guide.html">The Gift Edit</a></div><div class="footer-col"><h3>The Maison</h3><a href="about.html">About</a><a href="#journal">Journal</a><a href="contact.html">Contact</a><a href="mailto:agents@getservices.ai">Private Enquiries</a></div><div class="footer-col"><h3>Transparency</h3><a href="affiliate-disclosure.html">Affiliate Disclosure</a><p>Prices and availability are controlled by each retailer and may change.</p></div></div><div class="footer-bottom"><span>© 2026 Maison Aurelia · jewllery.store</span><span>Independent jewelry curation · Retailers fulfill all orders</span></div></div></footer>
+<script>
+const header=document.getElementById('header'),btn=document.getElementById('menuBtn'),menu=document.getElementById('mobileMenu');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40),{passive:true});
+btn.addEventListener('click',()=>{const open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.classList.toggle('menu-open',open)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')}));
+</script>
+</body></html>
