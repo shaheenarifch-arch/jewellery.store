@@ -33,5 +33,19 @@
     "google_quality_passed": true,
     "eeat_score": 100,
     "seo_aeo_score": 8.77
+  },
+  {
+    "keyword": "Diamond and fine jewelry buying complete guide",
+    "title": "Diamond and Fine Jewelry Buying Complete Guide",
+    "description": "This diamond and fine jewelry buying complete guide explains the 4Cs, metals, settings, lab-grown vs natural diamonds, and common buying mistakes to avoid.",
+    "file": "diamond-and-fine-jewelry-buying-complete-guide.html",
+    "date": "2026-10-31",
+    "archetype": "authority_guide",
+    "archetype_confidence": 0.97,
+    "risk_level": "low",
+    "requires_human_review": false,
+    "google_quality_passed": true,
+    "eeat_score": 100,
+    "seo_aeo_score": 9.4
   }
 ]
