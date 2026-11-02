@@ -47,5 +47,19 @@
     "google_quality_passed": true,
     "eeat_score": 100,
     "seo_aeo_score": 9.4
+  },
+  {
+    "keyword": "best travel jewelry case under $25",
+    "title": "Best Travel Jewelry Case Under $25: Top Picks",
+    "description": "Compare the best travel jewelry case under $25 options with compartments, hooks, and protective linings to keep jewelry organized on every trip.",
+    "file": "best-travel-jewelry-case-under-25.html",
+    "date": "2026-11-02",
+    "archetype": "best_products",
+    "archetype_confidence": 0.67,
+    "risk_level": "low",
+    "requires_human_review": false,
+    "google_quality_passed": true,
+    "eeat_score": 100,
+    "seo_aeo_score": 9.71
   }
 ]
