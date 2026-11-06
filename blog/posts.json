@@ -75,5 +75,19 @@
     "google_quality_passed": true,
     "eeat_score": 100,
     "seo_aeo_score": 9.71
+  },
+  {
+    "keyword": "how to choose lab diamond vs natural diamond",
+    "title": "How to Choose Lab Diamond vs Natural Diamond for Jewelry",
+    "description": "Learn how to choose lab diamond vs natural diamond for rings and gifts by comparing origin, certification, value, and sparkle in this clear guide.",
+    "file": "how-to-choose-lab-diamond-vs-natural-diamond.html",
+    "date": "2026-11-06",
+    "archetype": "comparison",
+    "archetype_confidence": 0.59,
+    "risk_level": "low",
+    "requires_human_review": false,
+    "google_quality_passed": true,
+    "eeat_score": 100,
+    "seo_aeo_score": 9.71
   }
 ]
