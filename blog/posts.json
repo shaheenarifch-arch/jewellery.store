@@ -89,5 +89,19 @@
     "google_quality_passed": true,
     "eeat_score": 100,
     "seo_aeo_score": 9.71
+  },
+  {
+    "keyword": "best lab grown diamond engagement rings",
+    "title": "Best Lab Grown Diamond Engagement Rings for Every Style",
+    "description": "Explore the best lab grown diamond rings for engagements, compare metals and settings, and get practical buying tips to choose the right style.",
+    "file": "best-lab-grown-diamond-engagement-rings.html",
+    "date": "2026-11-12",
+    "archetype": "best_products",
+    "archetype_confidence": 0.78,
+    "risk_level": "low",
+    "requires_human_review": false,
+    "google_quality_passed": true,
+    "eeat_score": 100,
+    "seo_aeo_score": 9.71
   }
 ]
